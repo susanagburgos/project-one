@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- to get rid of favicon request in console -->
+  <link rel="shortcut icon" href="">
+
+  <!-- P5 STUFF -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+  <!-- SOCKET STUFF -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+  <script type="text/javascript">
+    
+    /// SOCKET STUFF
+    var socket = io.connect();
+    
+    socket.on('connect', function() {
+      console.log("Connected");
+    });
+
+    socket.on('eraseDot', function(data){
+      
+      var index = Number(data.i);
+      console.log('i = ' + index);
+      
+      dots[index].color = 'white';
+      // dots[i].x = data.x; 
+      // dots[i].y = data.y;
+
+      //change color of dot[i]
+      // dots[i].
+    });
+    
+  </script>
+
+  <style> 
+  body {
+    padding: 0; 
+    margin: 0; 
+    float:center;
+  }
+  canvas#defaultCanvas0 {
+    display: block;
+    margin: 0 auto;
+}
+
+  </style>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
